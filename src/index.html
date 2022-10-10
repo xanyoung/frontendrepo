@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./styles/index.sass" />
+    <link rel="stylesheet" href="./styles/reset.sass" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__col header__col__logo">
+        <svg
+          class="header__logo"
+          width="179"
+          height="40"
+          viewBox="0 0 179 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M63.16 32.252C61.408 32.252 59.824 31.952 58.408 31.352C57.016 30.752 55.912 29.888 55.096 28.76C54.28 27.632 53.86 26.3 53.836 24.764H59.236C59.308 25.796 59.668 26.612 60.316 27.212C60.988 27.812 61.9 28.112 63.052 28.112C64.228 28.112 65.152 27.836 65.824 27.284C66.496 26.708 66.832 25.964 66.832 25.052C66.832 24.308 66.604 23.696 66.148 23.216C65.692 22.736 65.116 22.364 64.42 22.1C63.748 21.812 62.812 21.5 61.612 21.164C59.98 20.684 58.648 20.216 57.616 19.76C56.608 19.28 55.732 18.572 54.988 17.636C54.268 16.676 53.908 15.404 53.908 13.82C53.908 12.332 54.28 11.036 55.024 9.93196C55.768 8.82796 56.812 7.98796 58.156 7.41196C59.5 6.81196 61.036 6.51196 62.764 6.51196C65.356 6.51196 67.456 7.14796 69.064 8.41996C70.696 9.66796 71.596 11.42 71.764 13.676H66.22C66.172 12.812 65.8 12.104 65.104 11.552C64.432 10.976 63.532 10.688 62.404 10.688C61.42 10.688 60.628 10.94 60.028 11.444C59.452 11.948 59.164 12.68 59.164 13.64C59.164 14.312 59.38 14.876 59.812 15.332C60.268 15.764 60.82 16.124 61.468 16.412C62.14 16.676 63.076 16.988 64.276 17.348C65.908 17.828 67.24 18.308 68.272 18.788C69.304 19.268 70.192 19.988 70.936 20.948C71.68 21.908 72.052 23.168 72.052 24.728C72.052 26.072 71.704 27.32 71.008 28.472C70.312 29.624 69.292 30.548 67.948 31.244C66.604 31.916 65.008 32.252 63.16 32.252Z"
+            fill="#18063C"
+          />
+          <path
+            d="M74.7655 21.956C74.7655 19.94 75.1615 18.152 75.9535 16.592C76.7695 15.032 77.8615 13.832 79.2295 12.992C80.6215 12.152 82.1695 11.732 83.8735 11.732C85.3615 11.732 86.6575 12.032 87.7615 12.632C88.8895 13.232 89.7895 13.988 90.4615 14.9V12.056H95.5375V32H90.4615V29.084C89.8135 30.02 88.9135 30.8 87.7615 31.424C86.6335 32.024 85.3255 32.324 83.8375 32.324C82.1575 32.324 80.6215 31.892 79.2295 31.028C77.8615 30.164 76.7695 28.952 75.9535 27.392C75.1615 25.808 74.7655 23.996 74.7655 21.956ZM90.4615 22.028C90.4615 20.804 90.2215 19.76 89.7415 18.896C89.2615 18.008 88.6135 17.336 87.7975 16.88C86.9815 16.4 86.1055 16.16 85.1695 16.16C84.2335 16.16 83.3695 16.388 82.5775 16.844C81.7855 17.3 81.1375 17.972 80.6335 18.86C80.1535 19.724 79.9135 20.756 79.9135 21.956C79.9135 23.156 80.1535 24.212 80.6335 25.124C81.1375 26.012 81.7855 26.696 82.5775 27.176C83.3935 27.656 84.2575 27.896 85.1695 27.896C86.1055 27.896 86.9815 27.668 87.7975 27.212C88.6135 26.732 89.2615 26.06 89.7415 25.196C90.2215 24.308 90.4615 23.252 90.4615 22.028Z"
+            fill="#18063C"
+          />
+          <path
+            d="M98.8039 21.956C98.8039 19.94 99.1999 18.152 99.9919 16.592C100.808 15.032 101.9 13.832 103.268 12.992C104.66 12.152 106.208 11.732 107.912 11.732C109.4 11.732 110.696 12.032 111.8 12.632C112.928 13.232 113.828 13.988 114.5 14.9V12.056H119.576V32H114.5V29.084C113.852 30.02 112.952 30.8 111.8 31.424C110.672 32.024 109.364 32.324 107.876 32.324C106.196 32.324 104.66 31.892 103.268 31.028C101.9 30.164 100.808 28.952 99.9919 27.392C99.1999 25.808 98.8039 23.996 98.8039 21.956ZM114.5 22.028C114.5 20.804 114.26 19.76 113.78 18.896C113.3 18.008 112.652 17.336 111.836 16.88C111.02 16.4 110.144 16.16 109.208 16.16C108.272 16.16 107.408 16.388 106.616 16.844C105.824 17.3 105.176 17.972 104.672 18.86C104.192 19.724 103.952 20.756 103.952 21.956C103.952 23.156 104.192 24.212 104.672 25.124C105.176 26.012 105.824 26.696 106.616 27.176C107.432 27.656 108.296 27.896 109.208 27.896C110.144 27.896 111.02 27.668 111.836 27.212C112.652 26.732 113.3 26.06 113.78 25.196C114.26 24.308 114.5 23.252 114.5 22.028Z"
+            fill="#18063C"
+          />
+          <path
+            d="M132.814 32.252C131.062 32.252 129.478 31.952 128.062 31.352C126.67 30.752 125.566 29.888 124.75 28.76C123.934 27.632 123.514 26.3 123.49 24.764H128.89C128.962 25.796 129.322 26.612 129.97 27.212C130.642 27.812 131.554 28.112 132.706 28.112C133.882 28.112 134.806 27.836 135.478 27.284C136.15 26.708 136.486 25.964 136.486 25.052C136.486 24.308 136.258 23.696 135.802 23.216C135.346 22.736 134.77 22.364 134.074 22.1C133.402 21.812 132.466 21.5 131.266 21.164C129.634 20.684 128.302 20.216 127.27 19.76C126.262 19.28 125.386 18.572 124.642 17.636C123.922 16.676 123.562 15.404 123.562 13.82C123.562 12.332 123.934 11.036 124.678 9.93196C125.422 8.82796 126.466 7.98796 127.81 7.41196C129.154 6.81196 130.69 6.51196 132.418 6.51196C135.01 6.51196 137.11 7.14796 138.718 8.41996C140.35 9.66796 141.25 11.42 141.418 13.676H135.874C135.826 12.812 135.454 12.104 134.758 11.552C134.086 10.976 133.186 10.688 132.058 10.688C131.074 10.688 130.282 10.94 129.682 11.444C129.106 11.948 128.818 12.68 128.818 13.64C128.818 14.312 129.034 14.876 129.466 15.332C129.922 15.764 130.474 16.124 131.122 16.412C131.794 16.676 132.73 16.988 133.93 17.348C135.562 17.828 136.894 18.308 137.926 18.788C138.958 19.268 139.846 19.988 140.59 20.948C141.334 21.908 141.706 23.168 141.706 24.728C141.706 26.072 141.358 27.32 140.662 28.472C139.966 29.624 138.946 30.548 137.602 31.244C136.258 31.916 134.662 32.252 132.814 32.252Z"
+            fill="#18063C"
+          />
+          <path
+            d="M151.584 16.196V25.844C151.584 26.516 151.74 27.008 152.052 27.32C152.388 27.608 152.94 27.752 153.708 27.752H156.048V32H152.88C148.632 32 146.508 29.936 146.508 25.808V16.196H144.132V12.056H146.508V7.12396H151.584V12.056H156.048V16.196H151.584Z"
+            fill="#18063C"
+          />
+          <path
+            d="M168.169 32.324C166.249 32.324 164.521 31.904 162.985 31.064C161.449 30.2 160.237 28.988 159.349 27.428C158.485 25.868 158.053 24.068 158.053 22.028C158.053 19.988 158.497 18.188 159.385 16.628C160.297 15.068 161.533 13.868 163.093 13.028C164.653 12.164 166.393 11.732 168.313 11.732C170.233 11.732 171.973 12.164 173.533 13.028C175.093 13.868 176.317 15.068 177.205 16.628C178.117 18.188 178.573 19.988 178.573 22.028C178.573 24.068 178.105 25.868 177.169 27.428C176.257 28.988 175.009 30.2 173.425 31.064C171.865 31.904 170.113 32.324 168.169 32.324ZM168.169 27.932C169.081 27.932 169.933 27.716 170.725 27.284C171.541 26.828 172.189 26.156 172.669 25.268C173.149 24.38 173.389 23.3 173.389 22.028C173.389 20.132 172.885 18.68 171.877 17.672C170.893 16.64 169.681 16.124 168.241 16.124C166.801 16.124 165.589 16.64 164.605 17.672C163.645 18.68 163.165 20.132 163.165 22.028C163.165 23.924 163.633 25.388 164.569 26.42C165.529 27.428 166.729 27.932 168.169 27.932Z"
+            fill="#18063C"
+          />
+          <path
+            d="M22.3927 37.0075H11.3049C6.66779 37.0075 2.90637 33.2495 2.90637 28.609V11.3912C2.90637 6.7541 6.66435 2.99268 11.3049 2.99268H24.8164C23.3098 3.14093 21.8514 3.46156 20.4516 3.96492C18.4623 4.68204 16.8453 5.76116 15.6007 7.19885C14.3561 8.63653 13.7321 10.3604 13.7321 12.3738C13.7321 14.5286 14.2596 16.28 15.3146 17.6177C16.3661 18.9589 17.6383 19.9656 19.1243 20.6345C20.6068 21.3068 22.5237 21.9756 24.8715 22.6479C26.7885 23.2237 28.2848 23.727 29.3639 24.158C30.4396 24.589 31.3394 25.1889 32.06 25.9542C32.7771 26.7196 33.1356 27.7022 33.1356 28.8986C33.1356 30.6707 32.5013 32.0497 31.2325 33.0289C29.9638 34.0115 28.202 34.501 25.9507 34.501C23.458 34.501 21.5549 34.0804 20.2379 33.2426C18.9209 32.4049 18.2623 31.2671 18.2623 29.8294C18.2623 28.7779 18.5382 27.9608 19.0898 27.385C19.6414 26.8093 19.9172 26.499 19.9172 26.4507C19.9172 26.2128 19.6173 25.8749 19.0174 25.444C18.4175 25.013 17.7348 24.7958 16.9695 24.7958C15.6283 24.7958 14.5388 25.2268 13.7011 26.0887C12.8633 26.9506 12.4427 28.078 12.4427 29.4674C12.4427 31.9118 13.639 33.8046 16.0351 35.1423C17.7728 36.1249 19.8965 36.7386 22.3927 37.0075Z"
+            fill="#FA865F"
+          />
+          <path
+            d="M28.8399 0H11.1567C5.00603 0 0 5.00603 0 11.1567V28.8399C0 34.994 5.00603 39.9966 11.1567 39.9966H28.8399C34.994 39.9966 40 34.9905 40 28.8399V11.1567C40 5.00603 34.994 0 28.8399 0ZM39.045 28.8399C39.045 34.4734 34.4768 39.0415 28.8433 39.0415H11.1567C5.52319 39.0415 0.955008 34.4734 0.955008 28.8399V11.1567C0.955008 5.52319 5.52319 0.955008 11.1567 0.955008H28.8399C31.2429 0.955008 33.4494 1.79279 35.1939 3.18911C37.1798 5.10602 38.4899 8.31926 37.0074 11.5359C36.8109 12.0772 36.5178 12.5737 36.1283 13.0219C35.3387 13.9321 34.2941 14.3872 33.0012 14.3872C32.2324 14.3872 31.5532 14.17 30.9533 13.739C30.3534 13.3081 30.0534 12.9736 30.0534 12.7323C30.0534 12.684 30.2465 12.4944 30.6292 12.1565C31.0119 11.8221 31.3601 11.4256 31.6739 10.9705C31.9841 10.5154 32.1427 9.97759 32.1427 9.35356C32.0462 8.06068 31.398 7.05396 30.2017 6.33684C29.0019 5.61972 27.5884 5.25771 25.961 5.25771C24.1407 5.25771 22.5478 5.67833 21.1826 6.51612C19.8173 7.3539 19.1346 8.51577 19.1346 10.0017C19.1346 11.3429 19.4208 12.4082 19.9966 13.1977C20.5723 13.9872 21.4342 14.6251 22.5823 15.1008C23.7304 15.5801 25.5508 16.2282 28.0434 17.0419C30.5809 17.8555 32.5702 18.6106 34.0079 19.307C35.2284 19.8966 36.2179 20.6689 37.0074 21.6032C37.0178 21.617 37.0281 21.6273 37.0384 21.6411C38.3761 23.2512 39.045 25.3094 39.045 27.4022V28.8399Z"
+            fill="#FA865F"
+          />
+        </svg>
+      </div>
+      <div class="header__col">
+        <nav class="header__nav">
+          <a href="" class="header__nav__link">Demos</a>
+          <a href="" class="header__nav__link">Features</a>
+          <a href="" class="header__nav__link">Pricing</a>
+          <a href="" class="header__nav__link">Contact</a>
+        </nav>
+      </div>
+      <div class="header__col header__col__auth">
+        <button class="header__auth header__link">Login</button>
+        <button class="header__auth button -login">Sign up</button>
+      </div>
+      <div class="burger">
+        <img src="./assets/Menu.png" class="burger">
+      </div>
+    </header>
+    <main>
+      <div class="general">
+        <div class="general__images">
+          <img src="./assets/vector.png" class="vector1" />
+          <img src="./assets/alarm.png" class="alarm" />
+          <img src="./assets/CLIPBOARD VERIFIED 1.png" class="clipboard" />
+          <img src="./assets/Vector (1).png" class="vector2" />
+          <img src="./assets/Vector (2).png" class="vector3" />
+          <img src="./assets/Vector (3).png" class="vector4" />
+          <img src="./assets/Vector (4).png" class="vector5" />
+          <img src="./assets/Mobile Screen 1.png" class="mobile_off" />
+          <img src="./assets/Mobile Screen 2.png" class="mobile_on" />
+        </div>
+        <div class="general__content">
+          <div class="general__content__bigtext">
+            <span class="universal"
+              >A collaborative Time Tracking that you Need
+            </span>
+            <img
+              class="general__content__bigtext__shape"
+              src="./assets/Shape.png"
+            />
+          </div>
+          <div class="general__content__littletext">
+            An enim nullam tempor sapien gravida donec enim ipsum porta justo
+            congue magna at pretium purus pretium ligula
+          </div>
+          <button class="general__content__trial">Start 14 Days Trial</button>
+        </div>
+      </div>
+      <div class="information">
+        <div class="information__images">
+          <img src="./assets/Vector 23.png" class="star" />
+          <img src="./assets/3d_rocket.png" class="rocket" />
+        </div>
+        <div class="facts">
+          <div class="facts__expertises">
+            <span class="facts__expertises__values">15k+</span>
+            <span class="facts__expertises__text">Active user</span>
+            <div class="facts__expertises__line">
+            </div>
+          </div>
+          <div class="facts__expertises">
+            <span class="facts__expertises__values">30k</span>
+            <span class="facts__expertises__text">Total Download</span>
+            <div class="facts__expertises__line">
+            </div>
+          </div>
+          <div class="facts__expertises">
+            <span class="facts__expertises__values">10k</span>
+            <span class="facts__expertises__text">Customer</span>
+          </div>
+        </div>
+        <div class="information__bigtext">
+          <span class="universal">Some Excellent Features For You</span>
+          <img
+            class="information__bigtext__shape"
+            src="./assets/Shape (1).png"
+          />
+        </div>
+        <div class="information__littletext">
+          An enim nullam tempor sapien gravida donec enim ipsum porta justo
+          congue magna at pretium purus pretium ligula
+        </div>
+        <div class="information__blocks">
+          <div class="information__blocks__blue">
+            <div class="icons">
+                <img src="./assets/Icon.png" />
+            </div>
+            <div class="information__blocks__bigtext">Preset List of Task</div>
+            <div class="information__blocks__smalltext">
+              Make bill payments easily using the wallet app
+            </div>
+          </div>
+          <div class="information__blocks__purple">
+            <div class="icons">
+                <img src="./assets/Icon (1).png"/>
+            </div>
+            <div class="information__blocks__bigtext">Reminder of Task</div>
+            <div class="information__blocks__smalltext">
+              Make bill payments easily using the wallet app
+            </div>
+          </div>
+          <div class="information__blocks__orange">
+            <div class="icons">
+                <img src="./assets/Icon (2).png">
+            </div>
+            <div class="information__blocks__bigtext">Complecation Report</div>
+            <div class="information__blocks__smalltext">
+              Make bill payments easily using the wallet app
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="analytics">
+        <img src="./assets/Objects.png" class="phone" />
+        <div class="analytics__info">
+          <div class="analytics__info__bigtext">
+            <span class="universal">Analytics & Reporting Brackdown</span>
+            <img
+              class="analytics__info__bigtext__shape"
+              src="./assets/Shape (1).png"
+            />
+          </div>
+          <div class="analytics__info__smalltext">
+            An enim nullam tempor sapien gravida donec enim ipsum porta justo
+            congue magna at pretium purus pretium ligula
+          </div>
+          <div class="analytics__info__blocks">
+            <div class="analytics__info__blocks__orange">
+              <div class="analytics__info__blocks__orange__icon">
+                <img src="./assets/15-minutes 1.png" class="img"/>
+              </div>
+              <div class="analytics__info__blocks__orange__text">
+                <div class="analytics__info__blocks__orange__text__big">
+                  Automatic event tracking
+                </div>
+                <div class="analytics__info__blocks__orange__text__small">
+                  Time Tracking is never been easier. Just let the stopwatch run
+                </div>
+              </div>
+            </div>
+            <div class="analytics__info__blocks__blue">
+              <div class="analytics__info__blocks__blue__icon">
+                <img src="./assets/Frame.png" class="img"/>
+              </div>
+              <div class="analytics__info__blocks__blue__text">
+                <div class="analytics__info__blocks__blue__text__big">
+                  Customizable dashboard
+                </div>
+                <div class="analytics__info__blocks__blue__text__small">
+                  Time Tracking is never been easier. Just let the stopwatch run
+                </div>
+              </div>
+            </div>
+            <div class="analytics__info__blocks__yellow">
+              <div class="analytics__info__blocks__yellow__icon">
+                <img src="./assets/calendar (3) 1.png" class="img"/>
+              </div>
+              <div class="analytics__info__blocks__yellow__text">
+                <div class="analytics__info__blocks__yellow__text__big">
+                  Statistics retroactively
+                </div>
+                <div class="analytics__info__blocks__yellow__text__small">
+                  Time Tracking is never been easier. Just let the stopwatch run
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="work">
+        <div class="work__info">
+          <div class="work__info__bigtext">
+            <span class="universal">How our Tracker work for you </span>
+          </div>
+          <img class="work__info__bigtext__shape" src="./assets/Shape.png" />
+          <div class="work__info__smalltext">
+            An enim nullam tempor sapien gravida donec enim ipsum porta justo
+            congue magna at pretium purus pretium ligula
+          </div>
+
+          <div class="work__info__blocks">
+            <div class="work__info__blocks__green block-left">
+              <div class="work__info__blocks__green__image">
+                <img src="./assets/45-minutes 1.png" class="img"/>
+              </div>
+              <div class="work__info__blocks__green__texts">
+                <div class="work__info__blocks__green__texts__big">
+                  Time Tracking
+                </div>
+                <div class="work__info__blocks__green__texts__small">
+                  Time Tracking is never been easier. Just let the stopwatch run
+                </div>
+              </div>
+            </div>
+            <div class="work__info__blocks__pink block-right">
+              <div class="work__info__blocks__pink__image">
+                <img src="./assets/hourglass 1.png" class="img"/>
+              </div>
+              <div class="work__info__blocks__pink__texts">
+                <div class="work__info__blocks__pink__texts__big">Expenses</div>
+                <div class="work__info__blocks__pink__texts__small">
+                  Time Tracking is never been easier. Just let the stopwatch run
+                </div>
+              </div>
+            </div>
+            <div class="work__info__blocks__blue block-left">
+              <div class="work__info__blocks__blue__image">
+                <img src="./assets/wallet (2) 1.png" class="img"/>
+              </div>
+              <div class="work__info__blocks__blue__texts">
+                <div class="work__info__blocks__blue__texts__big">
+                  Budget controlling
+                </div>
+                <div class="work__info__blocks__blue__texts__small">
+                  Time Tracking is never been easier. Just let the stopwatch run
+                </div>
+              </div>
+            </div>
+          </div>
+          <img src="./assets/Vector 11.png" class="arrow2" />
+          <img src="./assets/Vector 10.png" class="arrow1" />
+          <img src="./assets/3D Image.png" class="loupe" />
+          <img src="./assets/3D Image (1).png" class="darts" />
+          <img src="./assets/chart.png" class="chart">
+          <div class="work__info__stat">
+            <img class="kit1 stat_image" src="./assets/Kit 1.png" />
+            <img class="kit2 stat_image" src="./assets/Kit 2.png" />
+            <img class="kit3 stat_image" src="./assets/Kit 3.png" />
+          </div>
+        </div>
+      </div>
+      <div class="pricing">
+        <div class="pricing__content">
+          <div class="pricing__content__texts">
+            <div class="pricing__content__texts__bigtext">
+              <span class="universal">Flexible work, Simple Price</span>
+              <img
+                class="pricing__content__texts__bigtext__shape"
+                src="./assets/Shape.png"
+              />
+            </div>
+            <div class="pricing__content__texts__smalltext">
+              Growth your business with using us
+            </div>
+          </div>
+          <div class="pricing__content__filter">
+            <div class="pricing__content__filter__texts">
+              <p>Monthly</p>
+              <div class="pricing__content__filter__texts__checkbox">
+                <input
+                  type="checkbox"
+                  id="toggle-button"
+                  class="toggle-button"
+                />
+                <label for="toggle-button" class="text"></label>
+              </div>
+              <p>Yearly</p>
+            </div>
+          </div>
+          <div class="pricing__content__buttons">
+            <div class="pricing__content__buttons__free">
+              <div class="pricing__content__buttons__free__text">
+                <p class="title free">Free</p>
+                <div class="pricing__content__buttons__free__text__small">
+                  <p class="features limited">1 seat</p>
+                  <p class="features limited">2 project</p>
+                </div>
+                <div class="pricing__content__buttons__free__text__price">
+                  <p class="dollar black">$</p>
+                  <p class="count zero">0</p>
+                  <p class="forever grey">/Forever</p>
+                </div>
+                <button
+                  class="pricing__content__buttons__free__text__price__trial"
+                >
+                  Start 14 Days Trial
+                </button>
+              </div>
+            </div>
+            <div class="pricing__content__buttons__premium">
+              <div class="pricing__content__buttons__premium__text">
+                <p class="title premium">Premium</p>
+                <div class="pricing__content__buttons__premium__text__small">
+                  <p class="features unlimited">Unlimited Seat</p>
+                  <p class="features unlimited">Unlimited project</p>
+                </div>
+                <div class="pricing__content__buttons__premium__text__price">
+                  <p class="dollar white">$</p>
+                  <p class="count thirty">30</p>
+                  <p class="forever whitee">/Forever</p>
+                </div>
+                <button
+                  class="pricing__content__buttons__premium__text__price__trial"
+                >
+                  Start 14 Days Trial
+                </button>
+              </div>
+            </div>
+          </div>
+          <img src="./assets/Hand.png" class="hand" />
+          <img src="./assets/Vector (7).png" class="vector6" />
+          <img src="./assets/3D Icon.png" class="hourglass" />
+        </div>
+      </div>
+      <div class="partner">
+        <div class="partner__content">
+          <div class="partner__content__text">
+            <div class="partner__content__text__big">
+              <span class="universal">See Our trusted partners</span>
+              <img
+                class="partner__content__text__big__shape"
+                src="./assets/Shape.png"
+              />
+            </div>
+            <div class="partner__content__text__small">
+              Vero homero perfecto mei ut, sonet aperiam an nec. Ni nec dict
+              altera legimu. Me vita de lege ndos expet end is ad. Ex mei omita
+              aliu mi ando
+            </div>
+          </div>
+          <button class="partner__content__button">Get Started</button>
+        </div>
+        <div class="partner__tools">
+          <div class="partner__tools__orange block">
+            <img src="./assets/Logo (1).png" class="logo1" />
+          </div>
+          <div class="partner__tools__green block">
+            <img src="./assets/Logo (2).png" class="logo2" />
+          </div>
+          <div class="partner__tools__yellow block">
+            <img src="./assets/Logo (3).png" class="logo3" />
+          </div>
+          <div class="partner__tools__purple block">
+            <img src="./assets/Logo (4).png" class="logo4" />
+          </div>
+          <div class="partner__tools__blue">
+            <img src="./assets/Logo (5).png" class="logo5" />
+          </div>
+        </div>
+      </div>
+      <div class="reviews">
+        <div class="reviews__content">
+          <div class="reviews__content__text1">
+            <div class="reviews__content__text1__big">
+              <span class="universal">What our client says</span>
+              <img
+                class="reviews__content__text1__big__shape"
+                src="./assets/Shape.png"
+              />
+            </div>
+            <div class="reviews__content__text1__small">
+              Growth your business with using us
+            </div>
+          </div>
+          <div class="reviews__content__text2">
+            <p class="reviews__content__text2__descrip">
+              Leading an organization is incredibly rewarding and equally
+              humbling. Confidence and humility. Every success is built on
+              lessons from mistakes made is incredibly rewarding
+            </p>
+            <div class="reviews__content__text2__author">
+              <p class="name">Mila McSabbu</p>
+              <p class="role">Designer</p>
+            </div>
+          </div>
+          <div class="reviews__content__nav">
+            <img src="./assets/Navigator.png" />
+          </div>
+          <div class="reviews__content__rectangle"></div>
+        </div>
+        <div class="reviews__images">
+          <img src="./assets/like.png" class="like" />
+          <img src="./assets/Vector (8).png" class="vector7" />
+          <img src="./assets/chat.png" class="chat" />
+          <img src="./assets/emoji.png" class="emoji" />
+          <img src="./assets/Vector (9).png" class="star1" />
+        </div>
+      </div>
+      <div class="get">
+        <div class="get__content">
+          <div class="get__content__text">
+            <div class="get__content__text__big">
+              <span class="universal">Get it now for free</span>
+              <img
+                class="get__content__text__big__shape"
+                src="./assets/Shape.png"
+              />
+            </div>
+            <div class="get__content__text__small">
+              We are offering free debit cards once you sing up and order a
+              card. we wont chargeyou for our debit card.
+            </div>
+          </div>
+          <div class="get__content__buttons">
+            <button class="get__content__buttons__ios">
+              <img src="./assets/Group 10147.png" class="appstore" />
+            </button>
+            <button class="get__content__buttons__android">
+              <img src="./assets/Group 10150.png" class="googleplay" />
+            </button>
+          </div>
+        </div>
+        <div class="get__images">
+          <img src="./assets/Image 1.png" class="pointer" />
+          <img src="./assets/Mobile Screen (1).png" class="mobile" />
+          <img src="./assets/Image 2.png" class="bigpointer" />
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__content">
+          <svg
+            class="footer__content__logo"
+            width="134"
+            height="31"
+            viewBox="0 0 134 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M47.3951 24.2016C46.0804 24.2016 44.8918 23.9765 43.8292 23.5263C42.7847 23.076 41.9563 22.4277 41.3439 21.5812C40.7316 20.7348 40.4164 19.7353 40.3984 18.5827H44.4506C44.5046 19.3571 44.7747 19.9694 45.261 20.4196C45.7653 20.8699 46.4496 21.095 47.3141 21.095C48.1965 21.095 48.8899 20.8879 49.3942 20.4737C49.8984 20.0414 50.1506 19.4831 50.1506 18.7988C50.1506 18.2405 49.9795 17.7812 49.6373 17.4211C49.2951 17.0609 48.8629 16.7817 48.3406 16.5836C47.8363 16.3675 47.134 16.1334 46.2335 15.8812C45.0089 15.5211 44.0093 15.1699 43.2349 14.8277C42.4785 14.4675 41.8212 13.9362 41.2629 13.2339C40.7226 12.5135 40.4525 11.559 40.4525 10.3704C40.4525 9.25377 40.7316 8.28126 41.2899 7.45282C41.8482 6.62439 42.6316 5.99406 43.6401 5.56183C44.6487 5.11159 45.8013 4.88647 47.098 4.88647C49.043 4.88647 50.6188 5.36372 51.8254 6.31823C53.0501 7.25472 53.7254 8.56941 53.8515 10.2623H49.6913C49.6553 9.61396 49.3762 9.08268 48.8539 8.66846C48.3496 8.23623 47.6743 8.02012 46.8278 8.02012C46.0894 8.02012 45.4951 8.20922 45.0449 8.58742C44.6127 8.96562 44.3965 9.5149 44.3965 10.2353C44.3965 10.7395 44.5586 11.1628 44.8828 11.5049C45.225 11.8291 45.6392 12.0993 46.1254 12.3154C46.6297 12.5135 47.3321 12.7476 48.2326 13.0177C49.4572 13.3779 50.4567 13.7381 51.2311 14.0983C52.0055 14.4585 52.6719 14.9988 53.2302 15.7192C53.7885 16.4395 54.0676 17.385 54.0676 18.5557C54.0676 19.5642 53.8065 20.5007 53.2842 21.3651C52.7619 22.2296 51.9965 22.9229 50.988 23.4452C49.9795 23.9495 48.7818 24.2016 47.3951 24.2016Z"
+              fill="#18063C"
+            />
+            <path
+              d="M56.1038 16.4756C56.1038 14.9628 56.401 13.6211 56.9953 12.4504C57.6076 11.2798 58.427 10.3794 59.4536 9.74903C60.4981 9.1187 61.6597 8.80353 62.9384 8.80353C64.055 8.80353 65.0275 9.02865 65.8559 9.47889C66.7024 9.92912 67.3777 10.4964 67.882 11.1808V9.04666H71.691V24.0125H67.882V21.8244C67.3957 22.5267 66.7204 23.112 65.8559 23.5803C65.0095 24.0305 64.028 24.2556 62.9114 24.2556C61.6507 24.2556 60.4981 23.9315 59.4536 23.2831C58.427 22.6348 57.6076 21.7253 56.9953 20.5547C56.401 19.3661 56.1038 18.0064 56.1038 16.4756ZM67.882 16.5296C67.882 15.6111 67.7019 14.8277 67.3417 14.1794C66.9815 13.513 66.4953 13.0087 65.8829 12.6666C65.2706 12.3064 64.6133 12.1263 63.9109 12.1263C63.2085 12.1263 62.5602 12.2974 61.9659 12.6395C61.3716 12.9817 60.8853 13.486 60.5071 14.1523C60.1469 14.8007 59.9668 15.5751 59.9668 16.4756C59.9668 17.376 60.1469 18.1684 60.5071 18.8528C60.8853 19.5192 61.3716 20.0324 61.9659 20.3926C62.5782 20.7528 63.2265 20.9329 63.9109 20.9329C64.6133 20.9329 65.2706 20.7618 65.8829 20.4196C66.4953 20.0594 66.9815 19.5552 67.3417 18.9068C67.7019 18.2405 67.882 17.4481 67.882 16.5296Z"
+              fill="#18063C"
+            />
+            <path
+              d="M74.1421 16.4756C74.1421 14.9628 74.4393 13.6211 75.0336 12.4504C75.6459 11.2798 76.4653 10.3794 77.4919 9.74903C78.5364 9.1187 79.698 8.80353 80.9767 8.80353C82.0933 8.80353 83.0658 9.02865 83.8942 9.47889C84.7407 9.92912 85.416 10.4964 85.9203 11.1808V9.04666H89.7293V24.0125H85.9203V21.8244C85.434 22.5267 84.7587 23.112 83.8942 23.5803C83.0478 24.0305 82.0663 24.2556 80.9497 24.2556C79.689 24.2556 78.5364 23.9315 77.4919 23.2831C76.4653 22.6348 75.6459 21.7253 75.0336 20.5547C74.4393 19.3661 74.1421 18.0064 74.1421 16.4756ZM85.9203 16.5296C85.9203 15.6111 85.7402 14.8277 85.38 14.1794C85.0198 13.513 84.5336 13.0087 83.9212 12.6666C83.3089 12.3064 82.6516 12.1263 81.9492 12.1263C81.2468 12.1263 80.5985 12.2974 80.0042 12.6395C79.4099 12.9817 78.9236 13.486 78.5454 14.1523C78.1852 14.8007 78.0051 15.5751 78.0051 16.4756C78.0051 17.376 78.1852 18.1684 78.5454 18.8528C78.9236 19.5192 79.4099 20.0324 80.0042 20.3926C80.6165 20.7528 81.2649 20.9329 81.9492 20.9329C82.6516 20.9329 83.3089 20.7618 83.9212 20.4196C84.5336 20.0594 85.0198 19.5552 85.38 18.9068C85.7402 18.2405 85.9203 17.4481 85.9203 16.5296Z"
+              fill="#18063C"
+            />
+            <path
+              d="M99.6633 24.2016C98.3486 24.2016 97.16 23.9765 96.0975 23.5263C95.0529 23.076 94.2245 22.4277 93.6122 21.5812C92.9998 20.7348 92.6847 19.7353 92.6667 18.5827H96.7188C96.7728 19.3571 97.043 19.9694 97.5292 20.4196C98.0335 20.8699 98.7178 21.095 99.5823 21.095C100.465 21.095 101.158 20.8879 101.662 20.4737C102.167 20.0414 102.419 19.4831 102.419 18.7988C102.419 18.2405 102.248 17.7812 101.906 17.4211C101.563 17.0609 101.131 16.7817 100.609 16.5836C100.105 16.3675 99.4022 16.1334 98.5017 15.8812C97.2771 15.5211 96.2776 15.1699 95.5032 14.8277C94.7468 14.4675 94.0894 13.9362 93.5311 13.2339C92.9908 12.5135 92.7207 11.559 92.7207 10.3704C92.7207 9.25377 92.9998 8.28126 93.5581 7.45282C94.1164 6.62439 94.8998 5.99406 95.9084 5.56183C96.9169 5.11159 98.0695 4.88647 99.3662 4.88647C101.311 4.88647 102.887 5.36372 104.094 6.31823C105.318 7.25472 105.994 8.56941 106.12 10.2623H101.96C101.924 9.61396 101.644 9.08268 101.122 8.66846C100.618 8.23623 99.9425 8.02012 99.096 8.02012C98.3577 8.02012 97.7633 8.20922 97.3131 8.58742C96.8809 8.96562 96.6648 9.5149 96.6648 10.2353C96.6648 10.7395 96.8268 11.1628 97.151 11.5049C97.4932 11.8291 97.9074 12.0993 98.3937 12.3154C98.8979 12.5135 99.6003 12.7476 100.501 13.0177C101.725 13.3779 102.725 13.7381 103.499 14.0983C104.274 14.4585 104.94 14.9988 105.498 15.7192C106.057 16.4395 106.336 17.385 106.336 18.5557C106.336 19.5642 106.075 20.5007 105.552 21.3651C105.03 22.2296 104.265 22.9229 103.256 23.4452C102.248 23.9495 101.05 24.2016 99.6633 24.2016Z"
+              fill="#18063C"
+            />
+            <path
+              d="M113.748 12.1533V19.3931C113.748 19.8974 113.865 20.2666 114.099 20.5007C114.351 20.7168 114.765 20.8248 115.342 20.8248H117.098V24.0125H114.72C111.533 24.0125 109.939 22.4637 109.939 19.3661V12.1533H108.156V9.04666H109.939V5.34571H113.748V9.04666H117.098V12.1533H113.748Z"
+              fill="#18063C"
+            />
+            <path
+              d="M126.193 24.2556C124.752 24.2556 123.456 23.9405 122.303 23.3102C121.151 22.6618 120.241 21.7523 119.575 20.5817C118.926 19.4111 118.602 18.0604 118.602 16.5296C118.602 14.9988 118.935 13.6481 119.602 12.4775C120.286 11.3068 121.214 10.4064 122.384 9.77604C123.555 9.1277 124.86 8.80353 126.301 8.80353C127.742 8.80353 129.048 9.1277 130.218 9.77604C131.389 10.4064 132.307 11.3068 132.974 12.4775C133.658 13.6481 134 14.9988 134 16.5296C134 18.0604 133.649 19.4111 132.947 20.5817C132.262 21.7523 131.326 22.6618 130.137 23.3102C128.967 23.9405 127.652 24.2556 126.193 24.2556ZM126.193 20.9599C126.878 20.9599 127.517 20.7978 128.111 20.4737C128.723 20.1315 129.21 19.6272 129.57 18.9609C129.93 18.2945 130.11 17.4841 130.11 16.5296C130.11 15.1068 129.732 14.0173 128.976 13.2609C128.237 12.4865 127.328 12.0993 126.247 12.0993C125.167 12.0993 124.257 12.4865 123.519 13.2609C122.798 14.0173 122.438 15.1068 122.438 16.5296C122.438 17.9523 122.789 19.0509 123.492 19.8253C124.212 20.5817 125.113 20.9599 126.193 20.9599Z"
+              fill="#18063C"
+            />
+            <path
+              d="M16.804 27.7701H8.48386C5.00419 27.7701 2.18164 24.9502 2.18164 21.4679V8.54783C2.18164 5.06815 5.0016 2.24561 8.48386 2.24561H18.6228C17.4922 2.35685 16.3979 2.59745 15.3475 2.97517C13.8547 3.51329 12.6414 4.32306 11.7074 5.40189C10.7735 6.48072 10.3052 7.77428 10.3052 9.28516C10.3052 10.9021 10.701 12.2164 11.4927 13.2202C12.2818 14.2266 13.2364 14.982 14.3515 15.4839C15.4639 15.9884 16.9024 16.4903 18.6642 16.9948C20.1026 17.4268 21.2254 17.8045 22.0352 18.1279C22.8424 18.4513 23.5176 18.9015 24.0583 19.4758C24.5964 20.0502 24.8655 20.7875 24.8655 21.6852C24.8655 23.015 24.3895 24.0499 23.4374 24.7846C22.4854 25.5219 21.1633 25.8893 19.4739 25.8893C17.6035 25.8893 16.1754 25.5737 15.1871 24.945C14.1988 24.3163 13.7047 23.4626 13.7047 22.3837C13.7047 21.5947 13.9116 20.9815 14.3256 20.5495C14.7395 20.1174 14.9465 19.8846 14.9465 19.8484C14.9465 19.6699 14.7214 19.4163 14.2713 19.0929C13.8211 18.7695 13.3088 18.6066 12.7345 18.6066C11.7281 18.6066 10.9106 18.9299 10.2819 19.5767C9.65324 20.2235 9.33761 21.0695 9.33761 22.1121C9.33761 23.9464 10.2353 25.3667 12.0334 26.3705C13.3373 27.1078 14.931 27.5683 16.804 27.7701Z"
+              fill="#FA865F"
+            />
+            <path
+              d="M21.6413 0H8.37192C3.7565 0 0 3.7565 0 8.37192V21.6413C0 26.2593 3.7565 30.0132 8.37192 30.0132H21.6413C26.2593 30.0132 30.0158 26.2567 30.0158 21.6413V8.37192C30.0158 3.7565 26.2593 0 21.6413 0ZM29.2991 21.6413C29.2991 25.8686 25.8712 29.2965 21.6438 29.2965H8.37192C4.14457 29.2965 0.716632 25.8686 0.716632 21.6413V8.37192C0.716632 4.14457 4.14457 0.716632 8.37192 0.716632H21.6413C23.4445 0.716632 25.1002 1.3453 26.4093 2.39309C27.8995 3.83152 28.8826 6.24272 27.7701 8.6565C27.6227 9.06268 27.4028 9.43523 27.1104 9.77155C26.518 10.4546 25.7341 10.7961 24.7639 10.7961C24.187 10.7961 23.6773 10.6331 23.2272 10.3097C22.777 9.98628 22.5519 9.73533 22.5519 9.55423C22.5519 9.51801 22.6968 9.37572 22.984 9.12218C23.2711 8.87123 23.5324 8.57371 23.7679 8.23221C24.0007 7.89071 24.1197 7.48712 24.1197 7.01886C24.0473 6.04869 23.5609 5.29325 22.6632 4.75513C21.7628 4.217 20.7021 3.94536 19.481 3.94536C18.115 3.94536 16.9198 4.26099 15.8953 4.88966C14.8708 5.51833 14.3585 6.39019 14.3585 7.50523C14.3585 8.51162 14.5732 9.31104 15.0053 9.90349C15.4373 10.4959 16.0841 10.9746 16.9456 11.3316C17.8071 11.6912 19.1731 12.1776 21.0436 12.7881C22.9478 13.3987 24.4405 13.9653 25.5193 14.4879C26.4352 14.9303 27.1777 15.5098 27.7701 16.2109C27.7779 16.2212 27.7857 16.229 27.7934 16.2393C28.7972 17.4475 29.2991 18.992 29.2991 20.5624V21.6413Z"
+              fill="#FA865F"
+            />
+          </svg>
+          <div class="footer__content__nav">
+            <a href="" class="footer__content__nav__link">Demos</a>
+            <a href="" class="footer__content__nav__link">Features</a>
+            <a href="" class="footer__content__nav__link">Pricing</a>
+            <a href="" class="footer__content__nav__link">Contact</a>
+          </div>
+          <div class="footer__content__socials">
+            <img src="./assets/Socials.png" class="" />
+          </div>
+        </div>
+        <div class="footer__line"></div>
+        <div class="footer__terms">
+          <div class="footer__terms__left">
+            <div>Terms & condition</div>
+            <div>Privacy policy</div>
+          </div>
+          <div>All Right Reserved @ plowv.com</div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
