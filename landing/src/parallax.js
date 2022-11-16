@@ -7,4 +7,4 @@ function parallax(event) {
     });
 }
 
-document.addEventListener('mousemove', parallax)
+document.addEventListener('mousemove', parallax);

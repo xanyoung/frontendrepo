@@ -2,16 +2,25 @@ $c-orange: #FF553E
 $c-beige: #FFF8F2
 $c-exblack: #18063C
 
+@mixin font-poppins
+    font-family: Poppins
+
+@mixin font-inter
+    font-family: Inter
+
+body
+    overflow-x: hidden
+
 .universal
     position: relative
     z-index: 2
 
 .header
+    @include font-poppins
     display: flex
     align-items: center
     justify-content: space-between
     background: $c-beige
-    font-family: 'Poppins'
     width: 100%
 
     .burger
@@ -51,7 +60,7 @@ $c-exblack: #18063C
     border-radius: 34px
     width: 133px
     height: 60px
-    color: #FFFFFF
+    color: white
 
 .general
     display: flex
@@ -104,7 +113,7 @@ $c-exblack: #18063C
 
         .vector3
             position: absolute
-            left: 96.9%
+            left: 96.8%
             top: 100px
 
             @media(max-width: 1000px)
@@ -145,7 +154,7 @@ $c-exblack: #18063C
 
         .mobile_on
             position: absolute
-            left: 69.7%
+            left: 69.4%
             top: 367px
 
             @media(max-width: 1550px)
@@ -159,21 +168,21 @@ $c-exblack: #18063C
             align-items: flex-start
 
         &__bigtext
+            @include font-poppins
             width: 800px
             height: 180px
             left: 29.2%
             margin-top: 220px
             font-size: 64px
-            font-family: Poppins
             font-weight: 700
             line-height: 90px
             text-align: center
             color: #1C0E0D
 
             @media(max-width: 1000px)
+                @include font-poppins
                 margin-top: 75px
                 font-size: 28px
-                font-family: Poppins
                 font-weight: 700
                 line-height: 160%
                 text-align: left
@@ -195,9 +204,9 @@ $c-exblack: #18063C
                     left: 85px
 
         &__littletext
+            @include font-inter
             color: #40201E
             margin-top: 24px
-            font-family: Inter
             font-weight: 400
             font-size: 20px
             line-height: 36px
@@ -216,6 +225,7 @@ $c-exblack: #18063C
                 margin-left: 6px
 
         &__trial
+            @include font-poppins
             display: flex
             flex-direction: row
             align-items: center
@@ -224,8 +234,7 @@ $c-exblack: #18063C
             height: 76px
             border-radius: 40px
             background: $c-orange
-            color: #FFFFFF
-            font-family: Poppins
+            color: white
             font-size: 18px
             margin-top: 68px
 
@@ -268,15 +277,15 @@ $c-exblack: #18063C
                 margin-top: 48px
 
             &__values
+                @include font-poppins
                 color: $c-exblack
-                font-family: Poppins
                 font-size: 48px
                 line-height: 64px
                 font-weight: 600
 
             &__text
+                @include font-inter
                 color: #404040
-                font-family: Inter
                 font-weight: 400
                 font-size: 18px
                 line-height: 18px
@@ -312,8 +321,8 @@ $c-exblack: #18063C
             top: 552px
 
     &__bigtext
+        @include font-poppins
         position: absolute
-        font-family: Poppins
         font-size: 48px
         font-weight: 600
         line-height: 70px
@@ -348,7 +357,7 @@ $c-exblack: #18063C
                 top: -56px
 
     &__littletext
-        font-family: Inter
+        @include font-inter
         color: #404040
         font-size: 18px
         line-height: 36px
@@ -424,16 +433,17 @@ $c-exblack: #18063C
                 border-radius: 30px
 
         &__bigtext
+            @include font-poppins
             position: relative
-            font-family: Poppins
             font-weight: 600
             font-size: 28px
             line-height: 28px
             margin-left: 30px
-            color: #FFFFFF
+            color: white
             top: 48px
 
             @media(max-width: 1000px)
+                @include font-poppins
                 display: flex
                 flex-direction: column
                 gap: 200px
@@ -442,21 +452,20 @@ $c-exblack: #18063C
                 font-size: 20px
                 line-height: 20px
                 text-align: left
-                font-family: Poppins
                 font-size: 20px
                 line-height: 20px
                 left: -10px
                 top: 40px
 
         &__smalltext
+            @include font-inter
             height: 52px
             width: 273px
             position: relative
-            font-family: Inter
             font-weight: 400
             font-size: 18px
             line-height: 26px
-            color: #FFFFFF
+            color: white
             top: 58px
             left: 30px
 
@@ -501,7 +510,7 @@ $c-exblack: #18063C
             width: 315px
 
         &__bigtext
-            font-family: Poppins
+            @include font-poppins
             font-weight: 600
             font-size: 48px
             line-height: 68px
@@ -533,8 +542,8 @@ $c-exblack: #18063C
                     bottom: 58px
 
         &__smalltext
+            @include font-inter
             color: #404040
-            font-family: Inter
             opacity: 0.8
             font-size: 18px
             line-height: 36px
@@ -582,7 +591,7 @@ $c-exblack: #18063C
 
                 &__text
                     &__big
-                        font-family: Poppins
+                        @include font-poppins
                         font-weight: 600
                         color: #404040
                         font-size: 28px
@@ -595,8 +604,8 @@ $c-exblack: #18063C
                             margin-top: 8px
 
                     &__small
+                        @include font-inter
                         margin-top: 8px
-                        font-family: Inter
                         font-size: 18px
                         line-height: 36px
                         font-weight: 400
@@ -635,7 +644,7 @@ $c-exblack: #18063C
 
                 &__text
                     &__big
-                        font-family: Poppins
+                        @include font-poppins
                         font-weight: 600
                         color: #404040
                         font-size: 28px
@@ -648,8 +657,8 @@ $c-exblack: #18063C
                             margin-top: 8px
 
                     &__small
+                        @include font-inter
                         margin-top: 8px
-                        font-family: Inter
                         font-size: 18px
                         line-height: 36px
                         font-weight: 400
@@ -688,7 +697,7 @@ $c-exblack: #18063C
 
                 &__text
                     &__big
-                        font-family: Poppins
+                        @include font-poppins
                         font-weight: 600
                         color: #404040
                         font-size: 28px
@@ -701,8 +710,8 @@ $c-exblack: #18063C
                             margin-top: 8px
 
                     &__small
+                        @include font-inter
                         margin-top: 8px
-                        font-family: Inter
                         font-size: 18px
                         line-height: 36px
                         font-weight: 400
@@ -742,7 +751,7 @@ $c-exblack: #18063C
             top: 0px
 
         &__bigtext
-            font-family: Poppins
+            @include font-poppins
             font-weight: 600
             font-size: 48px
             line-height: 68px
@@ -770,8 +779,8 @@ $c-exblack: #18063C
                     top: -58px
 
         &__smalltext
+            @include font-inter
             position: relative
-            font-family: Inter
             font-weight: 400
             color: #404040
             font-size: 18px
@@ -830,8 +839,8 @@ $c-exblack: #18063C
                         gap: 10px
 
                     &__big
+                        @include font-poppins
                         margin-top: -10px
-                        font-family: Poppins
                         font-size: 28px
                         font-weight: 600
                         line-height: 52px
@@ -844,7 +853,7 @@ $c-exblack: #18063C
                             margin-top: 0
 
                     &__small
-                        font-family: Inter
+                        @include font-inter
                         font-size: 18px
                         font-weight: 400
                         line-height: 36px
@@ -887,8 +896,8 @@ $c-exblack: #18063C
                         gap: 10px
 
                     &__big
+                        @include font-poppins
                         margin-top: -10px
-                        font-family: Poppins
                         font-size: 28px
                         font-weight: 600
                         line-height: 52px
@@ -901,7 +910,7 @@ $c-exblack: #18063C
                             margin-top: 0
 
                     &__small
-                        font-family: Inter
+                        @include font-inter
                         font-size: 18px
                         font-weight: 400
                         line-height: 36px
@@ -944,8 +953,8 @@ $c-exblack: #18063C
                         gap: 10px
 
                     &__big
+                        @include font-poppins
                         margin-top: -10px
-                        font-family: Poppins
                         font-size: 28px
                         font-weight: 600
                         line-height: 52px
@@ -958,7 +967,7 @@ $c-exblack: #18063C
                             margin-top: 0
 
                     &__small
-                        font-family: Inter
+                        @include font-inter
                         font-size: 18px
                         font-weight: 400
                         line-height: 36px
@@ -1118,7 +1127,7 @@ $c-exblack: #18063C
                 margin-left: 4px
 
             &__bigtext
-                font-family: Poppins
+                @include font-poppins
                 font-size: 48px
                 font-weight: 600
                 line-height: 70px
@@ -1151,10 +1160,10 @@ $c-exblack: #18063C
                         z-index: 3
 
             &__smalltext
+                @include font-inter
                 color: #404040
                 width: 302px
                 height: 36px
-                font-family: Inter
                 font-size: 18px
                 font-weight: 400
                 line-height: 36px
@@ -1183,10 +1192,10 @@ $c-exblack: #18063C
                 top: 0
 
             &__texts
+                @include font-poppins
                 display: flex
                 justify-content: space-between
                 align-items: center
-                font-family: Poppins
                 font-size: 24px
                 font-weight: 500
                 line-height: 28px
@@ -1255,7 +1264,7 @@ $c-exblack: #18063C
                     background-color: rgba(255, 85, 62, 0.2)
 
         .title
-            font-family: Inter
+            @include font-inter
             font-size: 48px
             font-weight: 600
             line-height: 48px
@@ -1267,10 +1276,10 @@ $c-exblack: #18063C
                 line-height: 20px
 
         .features
+            @include font-inter
             display: flex
             flex-direction: column
             align-items: center
-            font-family: Inter
             font-size: 28px
             font-weight: 600
             line-height: 52px
@@ -1288,7 +1297,7 @@ $c-exblack: #18063C
                 align-items: flex-start
 
         .dollar
-            font-family: Inter
+            @include font-inter
             font-size: 18px
             font-weight: 500
             line-height: 28px
@@ -1296,7 +1305,7 @@ $c-exblack: #18063C
             height: 28px
 
         .count
-            font-family: Inter
+            @include font-inter
             font-size: 64px
             font-weight: 700
             line-height: 64px
@@ -1310,7 +1319,7 @@ $c-exblack: #18063C
                 height: 28px
 
         .forever
-            font-family: Inter
+            @include font-inter
             font-size: 18px
             font-weight: 500
             line-height: 28px
@@ -1409,6 +1418,7 @@ $c-exblack: #18063C
                                 margin-top: 0
 
                         &__trial
+                            @include font-poppins
                             display: flex
                             flex-direction: row
                             align-items: center
@@ -1417,8 +1427,7 @@ $c-exblack: #18063C
                             height: 76px
                             border-radius: 40px
                             background: $c-orange
-                            color: #FFFFFF
-                            font-family: Poppins
+                            color: white
                             font-size: 18px
                             margin-top: 16px
 
@@ -1457,7 +1466,7 @@ $c-exblack: #18063C
                         height: 110px
 
                     .premium
-                        color: #fff
+                        color: white
 
                     &__small
                         display: flex
@@ -1468,7 +1477,7 @@ $c-exblack: #18063C
                             gap: 16px
 
                     .unlimited
-                        color: #fff
+                        color: white
 
                         @media screen and ( max-width: 1000px)
                             width: 150px
@@ -1480,7 +1489,7 @@ $c-exblack: #18063C
                         position: relative
                         width: 183px
                         height: 64px
-                        color: #fff
+                        color: white
 
                         @media screen and ( max-width: 1000px)
                             position: absolute
@@ -1509,6 +1518,7 @@ $c-exblack: #18063C
                                 opacity: 0.4
 
                         &__trial
+                            @include font-poppins
                             display: flex
                             flex-direction: row
                             align-items: center
@@ -1516,9 +1526,8 @@ $c-exblack: #18063C
                             width: 240px
                             height: 76px
                             border-radius: 40px
-                            background: #fff
+                            background: white
                             color: $c-orange
-                            font-family: Poppins
                             font-size: 18px
                             margin-top: 16px
 
@@ -1584,7 +1593,7 @@ $c-exblack: #18063C
                 gap: 18px
 
             &__big
-                font-family: Poppins
+                @include font-poppins
                 font-size: 48px
                 font-weight: 600
                 line-height: 70px
@@ -1614,8 +1623,8 @@ $c-exblack: #18063C
                         top: -52px
 
             &__small
+                @include font-inter
                 color: #404040
-                font-family: Inter
                 font-size: 18px
                 font-weight: 400
                 line-height: 36px
@@ -1633,12 +1642,12 @@ $c-exblack: #18063C
                     height: 116px
 
         &__button
+            @include font-poppins
             border: 1px solid $c-orange
             color: $c-orange
             border-radius: 40px
             width: 184px
             height: 76px
-            font-family: Poppins
             font-size: 18px
             font-weight: 500
             line-height: 28px
@@ -1805,7 +1814,7 @@ $c-exblack: #18063C
                 left: 0
 
             &__big
-                font-family: Poppins
+                @include font-poppins
                 font-size: 48px
                 font-weight: 600
                 color: $c-exblack
@@ -1833,9 +1842,9 @@ $c-exblack: #18063C
                         left: 113px
 
             &__small
+                @include font-inter
                 display: flex
                 justify-content: center
-                font-family: Inter
                 font-size: 18px
                 font-weight: 400
                 line-height: 36px
@@ -1861,7 +1870,7 @@ $c-exblack: #18063C
                 gap: 28px
 
             &__descrip
-                font-family: Inter
+                @include font-inter
                 font-size: 20px
                 font-weight: 400
                 line-height: 36px
@@ -1883,7 +1892,7 @@ $c-exblack: #18063C
                     gap: 10px
 
                 .name
-                    font-family: Inter
+                    @include font-inter
                     font-size: 24px
                     font-weight: 500
                     line-height: 24px
@@ -1896,7 +1905,7 @@ $c-exblack: #18063C
                         height: 24px
 
                 .role
-                    font-family: Inter
+                    @include font-inter
                     font-size: 18px
                     font-weight: 500
                     line-height: 26px
@@ -2023,7 +2032,7 @@ $c-exblack: #18063C
                 gap: 16px
 
             &__big
-                font-family: Poppins
+                @include font-poppins
                 font-size: 48px
                 font-weight: 600
                 line-height: 70px
@@ -2052,7 +2061,7 @@ $c-exblack: #18063C
                         top: -20px
 
             &__small
-                font-family: Inter
+                @include font-inter
                 font-size: 20px
                 font-weight: 400
                 line-height: 36px
@@ -2121,9 +2130,9 @@ $c-exblack: #18063C
                 display: none
 
 .footer
+    @include font-poppins
     height: 341px
     display: flex
-    font-family: 'Poppins'
     flex-direction: column
 
     @media(max-width: 1000px)
@@ -2180,10 +2189,10 @@ $c-exblack: #18063C
             display: none
 
     &__terms
+        @include font-inter
         margin-top: 40px
         margin-left: 19.7%
         margin-right: 19.7%
-        font-family: Inter
         font-size: 18px
         font-weight: 400
         color: #404040
