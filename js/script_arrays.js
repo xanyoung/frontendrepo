@@ -45,3 +45,39 @@ function bin_search(arr, elem) {
 }
 
 console.log(bin_search([1,2,3,12,23,45,67], 12))
+
+// 5
+
+function mergeArrays(array1, array2) {
+    let merged = [];
+    let i = 0;
+    let j = 0;
+    while (i < array1.length && j < array2.length) {
+        if (array1[i] < array2[j]) {
+            merged.push(array1[i]);
+            i++;
+        } else {
+            merged.push(array2[j]);
+            j++;
+        }
+    }
+    while (i < array1.length) {
+        merged.push(array1[i]);
+        i++;
+    }
+    while (j < array2.length) {
+        merged.push(array2[j]);
+        j++;
+    }
+    return merged;
+}
+
+function mergeSort(arr) {
+    if (arr.length <= 1) return arr;
+    let middle = Math.floor(arr.length / 2);
+    let start = arr.slice(0, middle);
+    let end = arr.slice(middle);
+    return mergeArrays(mergeSort(start), mergeSort(end));
+}
+
+console.log(mergeSort([2, 12, 7, 27, 63, 6, 4]))
